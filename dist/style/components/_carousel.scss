@@ -1,0 +1,274 @@
+.carousel {
+    grid-column: 1/span 6;
+    grid-row: 2/ span 2;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    &__container {
+        grid-column: 1/ span 5;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        margin-left : 20px;
+    }
+    &__img {
+        width : 100%;
+        height : 90px;
+        object-fit : contain;
+    }
+    &__title {
+        margin-left: 10px;
+        grid-column: 3/ span 6;
+        color : $mainyellow;
+        font : {
+            family : $font-subtitle;
+            size : $text-xxxs;
+        }
+        text-transform: uppercase;
+        grid-row : 1/ span 1;
+        margin-top : 25px;
+    }
+    &__btn {
+        grid-column: 2/ span 4;
+        background-color: $gray;
+        font : {
+            family : $font-title;
+            size : $text-xxs;
+        }
+        color : $mainyellow;
+        border : solid $mainyellow 1px;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+        grid-row: 6/ span 1;
+    }
+    &__link {
+        grid-column: 4/ span 3;
+        grid-row: 2/span 1;
+        margin-right : 20px;
+    }
+    &__next {
+        grid-column: 4/ span 1;
+        grid-row: 4/span 3;
+            }
+    &__prev {
+        grid-column: 3/ span 1;
+        grid-row: 1/ span 3;
+        margin-bottom : 150px;
+    }
+    &__arrow {
+        width : 100%; 
+        height : 50px;
+    }
+    &__image {
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 2;
+    }
+}
+
+.slick {
+    &-slider {
+        grid-column: 1/ span 6;
+        grid-row: 1/ span 2;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+    }
+    &-list {
+        grid-column: 1/ span 6;
+        grid-row: 1/ span 4;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 30px;
+        z-index : 0,
+    }
+    &-track {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    &-slide {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        opacity : 40%;
+    }
+    &-center {
+        background-color: $purple;
+        opacity : 100%;
+        z-index : 0;
+    }
+}
+
+
+.slick-slide>div {
+    grid-column: 1/span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.slick-arrow {
+    border : none;
+    background-color: transparent;
+    grid-column: 1/ span 6;
+}
+
+@media (min-width : 640px) {
+    .carousel {
+        grid-column: 1/ span 8;
+        grid-template-columns: repeat(8, 1fr);
+        &__container {
+            grid-column: 1/ span 8;
+            grid-template-columns: repeat(8, 1fr);
+        }
+        &__img {
+            margin-top: 20px;
+        }
+        &__image {
+            grid-column: 1/ span 3;
+        }
+        &__title {
+            grid-column: 4/ span 5;
+            font-size : $text-l;
+            }
+        &__btn {
+            font-size : $text-s;
+            grid-column: 3/ span 4;
+        }
+        &__next {
+            grid-row: 6/ span 1;
+        }
+        &__link {
+            grid-column: 5/ span 2 ;
+        }
+    }
+    .slick {
+        &-slider {
+            grid-column: 1/ span 8;
+        }
+    }
+}
+
+@media (min-width : 1000px) {
+    .carousel {
+        grid-column:  1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        &__title {
+            font-size : $text-xxl;
+        }
+        &__btn {
+            font-size : $text-m;
+            grid-column: 6/ span 4;
+        }
+        &__link {
+            grid-column: 5/ span 2;
+        }
+    }
+    .slick {
+        &-slider {
+            grid-column: 1/ span 10;
+        }
+    }
+}
+
+@media (min-width : 1300px) {
+    .carousel {
+        grid-column: 1/span 12;
+        grid-template-columns: repeat(12, 1fr);
+        &__container {
+            grid-column: 1/ span 10;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        &__img {
+            height : 200px;
+            margin-left : 50px;
+            margin-top : 8px;
+        }
+        &__title {
+            margin-left: 10px;
+            grid-column: 7/ span 6;
+            font-size : $text-xxxl;
+            grid-row : 1/ span 1;
+            margin-top : 25px;
+        }
+        &__btn {
+            grid-column: 8/ span 4;
+            font-size : $text-lm;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            grid-row: 6/ span 1;
+        }
+        &__link {
+            grid-column: 11/ span 2;
+            grid-row: 2/span 1;
+            margin-right : 20px;
+            align-self: end;
+        }
+        &__next {
+            grid-column: 4/ span 1;
+            grid-row: 3/span 1;
+                }
+        &__prev {
+            grid-column: 3/ span 1;
+            grid-row: 2/ span 1;
+            margin-bottom: 305px;
+            margin-top: 30px;
+        }
+        &__arrow {
+            width : 100%; 
+            height : 90px;
+            z-index : 1,
+        }
+        &__image {
+            grid-column: 2/ span 4;
+            margin-top : 10px;
+        }
+    }
+    
+    .slick {
+        &-slider {
+            grid-column: 1/ span 12;
+            grid-row: 1/ span 2;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+        }
+        &-list {
+            grid-column: 1/ span 12;
+            grid-row: 1/ span 4;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            margin-top: 30px;
+        }
+        &-track {
+            grid-column: 1/ span 12;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            height : 3800px;
+        }
+        &-slide {
+            grid-column: 1/ span 12;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            opacity : 40%;
+            transform: scale(0.8);
+            transform-style: preserve-3d;
+        }
+        &-center {
+            background-color: $purple;
+            opacity : 100%;
+            z-index : 0;
+            transform: scale(1.2);
+        }
+    }   
+    
+    .slick-slide>div {
+        grid-column: 1/span 12;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .slick-arrow {
+        grid-column: 1/ span 12;
+    }
+}
+

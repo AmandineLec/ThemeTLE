@@ -1,0 +1,45 @@
+.webtv {
+    grid-column: 1/ span 12;
+    display : grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: $mainpurple;
+    width : 100%;
+    margin-bottom : 50px;
+}
+
+.live {
+    grid-column: 1/ span 6;
+    margin-bottom : 20px;
+}
+
+.chat {
+    grid-column: 1/ span 6;;
+}
+
+@media (min-width : 1000px) {
+    .webtv {
+        grid-template-columns: repeat(10, 1fr);
+    }
+    .live {
+        grid-column:  2/ span 8;
+    }
+
+    .chat {
+        grid-column: 2/ span 8;
+    }
+}
+
+@media (min-width: 1300px) {
+    .webtv {
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 20px;
+    }
+    .live {
+        grid-column: 2/ span 8;
+        margin-left : 50;
+    }
+    .chat {
+        grid-column: 10/ span 2;
+        margin-left : 50;
+    }
+}

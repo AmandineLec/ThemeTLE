@@ -1,0 +1,698 @@
+.section {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    grid-template-rows: auto;
+    &__vecteur {
+        width: auto;
+        height : 40px;
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 1;
+        margin-bottom : 30px;
+    }
+    &__title {
+        margin-left : 20px;
+        margin-bottom: 10px;
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 1;
+        font-family: $font-title;
+        font-size : $text-s;
+        color : $cream;
+    }
+    &__twitter {
+        grid-column: 1/ span 6;
+        grid-row: 2/ span 1;
+        margin-left : 20px;
+        margin-right : 20px;
+        margin-bottom : 30px;
+        border-style: solid;
+        border-width: 5px 5px 5px 5px;
+        -moz-border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+        -webkit-border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+        -o-border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+        border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+    }
+}
+
+.player {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    grid-template-rows: auto;
+    margin-bottom : 30px;
+    &__card {
+        grid-column: 1/ span 6;
+    }
+}  
+
+.actu {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    grid-template-rows: auto;
+    
+}
+
+.asso {
+    grid-column : 1/span 6;
+    display : grid;
+    grid-template-columns : repeat(6, 1fr);
+    &__article {
+        grid-column: 1/ span 6;
+        margin : {
+            left : 20px;
+            right : 20px;
+            bottom : 20px;
+        }
+    }
+    &__subtitle {
+        font : {
+            size : $text-xxs;
+            family : $font-subtitle;
+        }
+        color : $white;
+    }
+    &__desc {
+        color : $white;
+        font-size : $text-xxxs;
+    }
+    &__vecteur {
+        margin-bottom : 0;
+    }
+}
+
+.fichejoueur {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    &__header {
+        grid-column: 1/ span 6;
+        display : grid;
+        grid-template-columns: repeat(6, 1fr);
+        background-color: $purple;
+        grid-template-rows: auto;
+    }
+    &__image {
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 2;
+    }
+    &__img {
+        padding : {
+            left : 20px;
+            top : 20px;
+            bottom : 20px;
+        }
+        width : 100%;
+        object-fit : cover;
+    }
+    &__desc {
+        grid-column: 3/ span 4 ;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        padding : 20px;
+        grid-row: 1/ span 2;
+    }
+    &__infos {
+        grid-row: 1/ span 2;
+        grid-column: 1/ span 4;
+    }
+    &__info {
+        color : $cream;
+        display: inline;
+        font : {
+            family : $font-subtitle;
+            weight : bold;
+            size : $text-xxxs;
+        }
+    }
+    &__rep {
+        color : $cream;
+        display: inline;
+        font-size : $text-xxxs;
+    }
+    &__flag {
+        grid-column: 4/ span 1;
+        grid-row: 1/ span 1;
+        height : 40px;
+    }
+    &__information {
+        margin-bottom : 5px;
+    }
+    &__trophees {
+        grid-column: 1/ span 6;
+        display : grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        margin : {
+            right : 20px;
+            bottom : 10px;
+        }    
+    }
+    &__about {
+        grid-column: 1/ span 6;
+        color: $cream;
+        background-color: $purple;
+        font-size : $text-xxxs;
+        margin-bottom: 30px;
+    }
+    &__abt {
+        margin : {
+            left : 20px;
+            right : 20px;
+        }
+    }
+    &__drapeau {
+        height : 25px;
+    }
+}
+
+.trophee {
+    &__article {
+        grid-column: 1/ span 6 ;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-right : 20px;
+    }
+}
+
+.trophees {
+    &__title {
+        grid-column: 1/ span 6;
+        color : $cream;
+        margin-left : 20px;
+        font : {
+            family : $font-subtitle;
+            size : $text-xxxs;
+            weight : bold;
+        }
+    }
+}
+
+.equipe {
+    grid-column: 1/ span 6;
+    display : grid;
+    grid-column: repeat(6, 1fr);
+    &__art {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        margin : {
+            left : 20px;
+            right : 20px;
+        }
+    }
+    &__img {
+        grid-column: 1/ span 6;
+        padding : {
+            left : 20px;
+            right : 20px;
+        }
+        width : 100%;
+    }
+    &__subtitle {
+        grid-column: 1/ span 6;
+        color : $cream;
+        font : {
+            size : $text-xxxs;
+            family : $font-subtitle;
+            weight : bold;
+        }
+    }
+    &__title {
+        grid-column: 1/ span 6;
+    }
+}
+
+.contact{
+    &__form {
+    grid-column: 1/ span 6;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+    &__desc {
+        font : {
+            family : $font-text;
+            size : $text-xxs;
+        }
+    }
+    &__option {
+        font : {
+            family : $font-text;
+            size : $text-xxs;
+        }
+    }
+    &__btn {
+        font : {
+            family : $font-title;
+            size : $text-xs;
+        }
+        text-transform: uppercase;
+    }
+}
+.politique {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-left : 20px;
+    margin-right : 20px;
+    &__paragraphe {
+        grid-column: 1/ span 6;
+        color : $cream;
+    }
+    &__subtitle {
+        font : {
+            size : $text-xxs;
+            family: $font-subtitle; 
+        };
+        color : $cream;
+        grid-column: 1/ span 6;
+    }
+}
+
+@media (min-width : 640px) {
+    .section {
+        grid-column: 1/ span 8;
+        display : block;
+        &__vecteur {
+            grid-column: 1/ span 4;
+        }
+        &__twitter {
+            grid-column: 1/ span 4;
+        }
+    }
+    .player {
+        grid-column: 1/ span 4;
+        grid-template-columns: repeat(4, 1fr);
+        &__card {
+            grid-column: 1/ span 4;
+            margin-left: 10px;
+        }
+    }
+    .actu {
+        grid-column: 5/ span 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        &__vecteur {
+            grid-column: 1/ span 4;
+            transform: scaleX(-1);
+            z-index : 0;
+        }
+        &__title {
+            margin-left: 40px;
+            z-index : 1;
+            grid-column: 3/ span 2;
+            height : 53px;
+        }
+    }
+
+    .fichejoueur {
+        grid-column: 1/ span 8;
+        grid-template-columns: repeat(8, 1fr);
+        &__header {
+            grid-column: 1/ span 8;
+        }
+        &__trophees {
+            grid-column: 1/ span 8;
+        }
+        &__about {
+            grid-column: 1/ span 8;
+        }
+        &__info {
+            font-size : $text-xxs;
+        }
+        &__rep {
+            font-size: $text-xxs;
+        }
+        &__drapeau {
+            height : 35px;
+        }
+    }
+    .trophee {
+        &__article {
+            grid-column: 1/ span 8;
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+
+    .equipe {
+        &__art {
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+    .palmares {
+        &__subtitle {
+            grid-column: 1/ span 8;
+        }
+    }
+    .politique {
+        grid-column: 1/ span 8;
+        grid-template-columns: repeat(8, 1fr);
+        &__paragprahe {
+            grid-column: 1/ span 8;
+        }
+        &__subtitle {
+            grid-column: 1/ span 8;
+        }
+    }
+    
+}
+
+@media (min-width : 1000px){
+    .section {
+        margin-top: 30px;
+        grid-column: 1/ span 10;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        &__title {
+            font-size : $text-xl;
+            margin-top : 35px;
+        }
+        &__vecteur {
+            height : 80px;
+        }
+    }
+    .player {
+        grid-column: 1/ span 5;
+        grid-template-columns: repeat(5, 1fr);
+        &__card {
+            margin-left : 50px;
+        }
+    }
+    .actu {
+        grid-column: 6/ span 5;
+        grid-template-columns: repeat(5, 1fr);
+        &__vecteur {
+            grid-column: 2/ span 4;
+        }
+        &__title {
+            grid-column: 3/ span 3;
+        }
+    }
+    .fichejoueur {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        &__header {
+            grid-column: 1/ span 10;
+        }
+        &__trophees {
+            grid-column: 1/ span 10;
+            grid-template-columns: repeat(10, 1fr);
+        }
+        &__about {
+            grid-column: 1/ span 10;
+        }
+    }
+    .trophees {
+        &__title {
+            grid-column: 1/ span 8;
+            font-size: $text-s;
+        }
+    }
+    .trophee {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        &__article {
+            grid-column: 1/ span 10;
+            grid-template-columns: repeat(10, 1fr);
+        }
+    }
+    .equipe {
+        &__img {
+            grid-column: 1/ span 10;
+        }
+        &__composition {
+            grid-column: 1/ span 5;
+            grid-template-columns: repeat(5, 1fr)
+        }
+        &__staff {
+        grid-column: 6/ span 5;
+        grid-template-columns: repeat(5, 1fr);
+        } 
+        &__subtitle {
+            font-size: $text-xs;
+        } 
+    }
+    .palmares {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    .asso {
+        &__article {
+            grid-column: 2/ span 8;
+        }
+    }
+    .contact {
+        &__form {
+        grid-column: 2/ span 8;
+        }
+    }
+    .politique {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        &__paragprahe {
+            grid-column: 1/ span 10;
+        }
+        &__subtitle {
+            font-size : $text-xs;
+            grid-column: 1/ span 10;
+        }
+    }
+    
+}
+@media (min-width : 1300px){
+    .section {
+        grid-column: 1/ span 12;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        &__vecteur {
+            grid-column: 1/ span 5;
+            grid-row: 1/ span 1;
+            height : 95px;
+        }
+        &__title {
+            margin-left: 160px;
+            grid-column: 1/ span 5;
+            font-size : $text-xxxl;
+            grid-row: 1/ span 1;
+            margin-bottom : 30px;
+        }
+        &__twitter {
+            grid-column: 2/ span 4;
+            margin-bottom : 50px;
+        }
+    }
+
+    .player {
+        grid-column: 1/ span 6;
+        grid-template-columns: repeat(6, 1fr);
+        &__card {
+            grid-column: 2/ span 4;
+        }
+    }
+
+    .actu {
+        grid-column: 7/span 6;
+        grid-template-columns: repeat(6, 1fr);
+        margin-bottom : 30px;
+        &__vecteur {
+            grid-column: 1/ span 6;
+        }
+        &__title {
+            margin-left: 140px;
+            grid-column: 3/ span 4 ;
+        }
+    }
+    .asso {
+        grid-column: 1/ span 12;
+        grid-template-columns: repeat(1/ span 12);
+        &__article {
+            grid-column: 3/ span 9;
+            margin {
+                left : 50px;
+                right : 50px;
+            }
+        }
+        &__subtitle {
+            font-size : $text-l;
+        }
+        &__desc {
+            font-size : $text-m;
+        }
+    } 
+    .article {
+        &__deux {
+            display : grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+     .trophee {
+        &__article {
+            grid-column: 1/ span 12;
+            grid-template-columns: repeat(12, 1fr);
+            margin-right : 50px;
+            }
+        }
+    .fichejoueur {
+        grid-column: 1/ span 12;
+        grid-template-columns: repeat(12, 1fr);
+        &__header {
+            grid-column: 1/ span 12;
+            grid-template-columns: repeat(12, 1fr);
+            }
+            &__image {
+                grid-column: 2/ span 3;
+            }
+            &__img {
+                height : 400px;
+            }
+            &__desc {
+                grid-column: 5/ span 4 ;
+                grid-column: repeat(5, 1fr);
+                grid-template-rows: auto;
+            }
+            &__infos {
+                grid-row: 1/ span 2;
+                grid-column: 1/ span 6;
+            }
+            &__info {
+                font-size : $text-l;
+            }
+            &__rep {
+                font-size : $text-l;
+            }
+            &__flag {
+                grid-column: 5/ span 1;
+                width : 100%;
+                height : 40px;
+            }
+            &__trophees {
+                grid-column: 1/ span 12;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: auto;
+                margin : {
+                    right : 20px;
+                    bottom : 30px;
+                }    
+            }
+            &__about {
+                grid-column: 1/ span 12;
+                font-size : $text-s;
+                margin-bottom: 50px;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+            }
+            &__abt {
+                margin : {
+                    left : 20px;
+                    right : 20px;
+                }
+                grid-column: 2/ span 12;
+            }
+            &__drapeau {
+                height : 50px;
+            }
+        }
+    .trophees {
+        margin-right: 50px;
+            &__title {
+                grid-column: 2/ span 12;
+                font-size: $text-l;
+                margin : 0;
+                margin : {
+                    top : 20px;
+                    bottom : 20px;
+                }
+            }
+        }
+    
+    .equipe {
+    grid-column: 1/ span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    &__art {
+        grid-column: 1/ span 12;
+        grid-template-columns: repeat(12, 1fr);
+        margin : {
+            left : 20px;
+            right : 20px;
+        }
+    }
+    &__img {
+        grid-column: 2/ span 10;
+        padding : {
+            left : 20px;
+            right : 20px;
+        }
+    }
+    &__subtitle {
+        grid-column: 1/ span 12;
+        grid-row: 1/ span 1;
+        font-size : $text-l;
+    }
+    &__title {
+        grid-column: 1/ span 12;   
+    }
+    &__composition {
+        grid-column: 2/ span 5;
+        display : flex;
+        flex-direction: column;
+        width: 700px;
+    }
+    &__staff {
+        grid-column: 7/ span 5;
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+    }
+    }
+    .palmares {
+        grid-column: 1/ span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        &__subtitle {
+            grid-column: 2/ span 12;
+        }
+    }
+    .contact {
+        &__form {
+        grid-column: 3/ span 7;
+        }
+        &__desc {
+            font-size : $text-s;
+        }
+        &__option {
+            font-size: $text-s;
+        }
+        &__btn {
+            font-size: $text-m;
+        }
+    }
+    .politique {
+        grid-column: 1/ span 12;
+        grid-template-columns: repeat(12, 1fr);
+        margin-left : 50px;
+        margin-right : 50px;
+        &__paragraphe {
+            grid-column: 2/ span 10;
+        }
+        &__subtitle {
+            font-size : $text-s;
+            grid-column: 2/ span 10;
+        }
+    }
+    
+    
+}
+
+
+
+
+

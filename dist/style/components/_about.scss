@@ -1,0 +1,223 @@
+.about {
+    padding-top : 50px;
+    padding-bottom : 30px;
+    margin-bottom : 30px;  
+    background-color: $purple;
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    &__text {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-left : 20px;
+        margin-right : 20px;
+    }
+    &__desc{
+        grid-column: 1/ span 6;
+        color : $cream;
+        font-size : $text-xxxs;
+    }
+    &__link {
+        grid-column: 4 /span 3;
+        margin-top : 20px;
+        width: 100%;
+        background-color: $gray;
+        font : {
+            family : $font-title;
+            size : $text-xxs;
+        }
+        color : $mainyellow;
+        border : solid $mainyellow 1px;
+        border-radius: 15px;
+        text-align: center;
+    }   
+}
+.slider {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-right : 20px;
+    margin-left : 20px;
+    &__image {
+        grid-column: 1/ span 6;
+        grid-row: 1/ span 2;
+        display: grid;
+        grid-template-columns: 1/ span 6;
+        grid-template-rows: auto;
+    }
+    &__img {
+        width: 100%;
+        height : 335px;
+        object-fit: cover;
+    }
+    &__picture {
+        grid-column: 1/ span 6;
+        grid-row: 1/ span 1;
+        z-index : 0;
+    }
+    &__btn {
+        grid-column: 1/ span 6;
+        grid-row: 1/ span 2;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        align-items: center;
+        z-index : 1;
+    }
+    &__next {
+        grid-column: 6/ span 1;
+        grid-row: 1/ span 1;
+    }
+    &__prev {
+        grid-column: 1/ span 1;
+        grid-row: 1/ span 1;
+    }
+}
+.initial{
+        z-index : 1;
+}
+
+@media (min-width : 640px) {
+    .about {
+        grid-column: 1/ span 8;
+        &__desc {
+            font-size : $text-xs;
+        }
+        &__link {
+            font-size : $text-lm;
+        }
+        &__text {
+            margin-left : 30px;
+            margin-right : 30px;
+        }
+    }
+    .slider {
+        &__picture {
+            width : 60%;
+            justify-self: center;
+        }
+        &__prev {
+            height : 100px;
+        }
+        &__next {
+            height : 100px;
+            justify-self: end;;
+        }
+    }
+}
+
+@media (min-width : 1000px){
+    .about {
+        grid-column: 1/span 10;
+        grid-template-columns: repeat(10, 1fr);
+        &__desc {
+            font-size : $text-s;
+            grid-column: 1/ span 10;
+        }
+        &__link {
+            grid-column: 8/ span 3;
+            font-size : $text-s;
+        }
+        &__text {
+            grid-column: 1/ span 10;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+    .slider {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        &__image {
+            grid-column: 1/ span 10;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            margin-bottom: 30px;
+            grid-row: 1, span 1;
+        }
+        &__picture {
+            width : 100%;
+            grid-column: span 3;
+            opacity: 40%;
+        }
+        &__img {
+            height : 200px;
+        }
+        &__btn {
+            grid-column: 1/ span 10;
+        }
+    }
+    .initial{
+        transform: scale(1.1);
+        opacity: 100%;
+        display: block;
+        z-index : 0;
+    }
+}
+
+
+@media (min-width: 1300px) {
+    .about {
+        grid-column: 1/ span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        &__text {
+            grid-column: 2/ span 10;
+        }
+        &__desc {
+            font-size: $text-l;
+        }
+        &__link {
+            font-size : $text-xl;
+            grid-row: 4/ span 1;
+            padding : 8px;
+            border-radius: 10px;
+        }
+    }
+    .slider {
+        grid-column: 1/ span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        &__image {
+            grid-column: 1/ span 12;
+            grid-template-columns: repeat(12, 1fr);
+            margin-left : 30px;
+            margin-right : 30px;
+        }
+        &__img {
+            grid-column: span 3;
+            height : 300px;
+            padding-left : 5px;
+            padding-right : 5px;
+            display: block;
+        }
+        &__btn {
+            cursor : pointer;
+            grid-column: 1/ span 12;
+            grid-row : 1/ span 1;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            align-items: center;
+            z-index : 1;
+        }
+        &__next {
+            grid-column: 12/ span 1;
+            grid-row: 1/ span 1;
+            justify-self: right;
+        }
+        &__prev {
+            grid-column: 1/ span 1;
+            grid-row: 1/ span 1;
+        }
+    }
+}
+
+
+
+
+
+
+
+

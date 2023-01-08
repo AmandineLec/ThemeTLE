@@ -1,0 +1,45 @@
+//importation des polices
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@font-face {
+    font-family: 'spy_agency_condensedcondensed';
+    src: url('https://toulouse-landers.fr/wp-content/themes/themeTLE/dist/src/css/font/spyagency3_2cond.woff2') format('woff2');
+    src: url('https://toulouse-landers.fr/wp-content/themes/themeTLE/dist/src/css/font/spyagency3_2cond.eot?#iefix') format('embedded-opentype'),
+         url('https://toulouse-landers.fr/wp-content/themes/themeTLE/dist/src/css/font/spyagency3_2cond.woff') format('woff'),
+         url('https://toulouse-landers.fr/wp-content/themes/themeTLE/dist/src/css/font/spyagency3_2cond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//Polices
+$font-title : 'spy_agency_condensedcondensed';
+$font-subtitle : 'Poppins';
+$font-text : 'Calibri';
+    
+// Couleur
+$mainpurple : #22133E;
+$mainyellow : #FFCD22;
+$black : #000000;
+$purple : #130725;
+$yellow : #D6AB1F;
+$gray : #2B2B2B;
+$cream : #D6D6D6;
+$white : #FFFFFF;
+$silver : #868992;
+$bronze : #614E1A;
+
+//Taille police 
+$text-xxxl : rem(50);
+$text-xxl : rem(40);
+$text-xl : rem(35);
+$text-l : rem(30);
+$text-lm : rem(25);
+$text-m : rem(22);
+$text-s : rem(20);
+$text-xs : rem(18);
+$text-xxs : rem(14);
+$text-xxxs : rem(12);
+$text-xxxxs : rem(6);
+
+/* Font variantes */
+$letter-spacing: 0.05em;

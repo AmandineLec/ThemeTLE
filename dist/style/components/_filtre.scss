@@ -1,0 +1,114 @@
+.widget {
+    grid-column: 1/ span 6;
+}
+.wpc-filters-widget-wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+}
+
+.wpc-filter-taxonomy {
+    grid-column: span 2;
+    margin-left: 20px;
+}
+
+.wpc-filter-header {
+    display: none;
+}
+.wpc-filter-set-widget-title {
+    font : {
+        family : $font-subtitle;
+        size : $text-xxxs;
+        weight : bold;
+    }
+    color :$cream;
+    margin-left : 20px;
+}
+
+.wpc-posts-found {
+    display: none;
+}
+
+.wpc-filters-submit-button,
+.wpc-filters-reset-button {
+   text-transform: uppercase;
+    font : {
+        family : $font-subtitle;
+        size : rem(11);
+        weight : bold;
+    }
+}
+
+.wpc-filters-section {
+    margin : 0;
+    margin-left: 20px;
+    grid-column: span 3;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+.wpc-filter-layout-submit-button {
+    grid-column: 1/span 6;
+    grid-row: 3/ span 1;
+    margin-left : 20px;
+    margin-right : 20px;
+}
+
+.wpc-filters-widget-select {
+    background-color: $purple;
+    color : $cream;
+    font : {
+        family: $font-subtitle;
+        size : rem(11);
+    }
+    border : solid 1px $mainyellow;
+    border-radius: 0px;
+}
+.wpc-filters-widget-select:hover {
+    border : solid 1px $cream;
+    border-radius: 0px;
+}
+
+@media (min-width : 1000px) {
+    .wpc-filters-section {
+        grid-column: span 2;
+    }
+
+}
+@media (min-width : 1300px) {
+    .wpc-filter-taxonomy {
+        grid-column: span 2;
+        margin-left: 20px;
+    }
+
+    .wpc-filters-widget-containers-wrapper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .wpc-filter-set-widget-title {
+        grid-column: 1/ span 1;
+    }
+    .wpc-filters-scroll-container {
+        grid-column: 2/ span 5;
+    }
+        
+    .wpc-filters-section {
+        margin : 0;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    .widgettitle {
+        margin : 0;
+        margin-top : 5px;
+    }
+    .wpc-filters-submit-button,
+    .wpc-filters-reset-button {
+    font-size : $text-xs;
+    }
+    .wpc-filter-layout-submit-button {
+        grid-column: 1/ span 4;
+    }
+    .wpc-filters-widget-select {
+        font-size : $text-xs;
+    }
+    
+}

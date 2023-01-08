@@ -1,0 +1,544 @@
+.card {
+    grid-column: span 6;
+    margin-left : 20px;
+    margin-right : 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    background-color: $purple;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    -moz-border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+    -webkit-border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+    -o-border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+    border-image: url(cadre_bordure.svg) 5 5 4 3 repeat stretch;
+    &__link {
+        grid-column: 1/ span 6;
+        display : grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    &__header {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-row: 1/ span 1;
+        grid-template-rows: auto;
+    }
+    &__img {
+        width: 100%;
+        height : 100px;
+        object-fit: cover;
+    }
+    &__image {
+        grid-row: 1/ span 2;
+        grid-column: 1/ span 2;
+        margin-left : 10px;
+        margin-top : 10px;
+    }
+    &__flag {
+        margin-top : 15px;
+        width : 100%;
+        height : 15px;
+        margin-left : 15px;
+    }
+    &__roles {
+        grid-column: 6/ span 1;
+        grid-row: 1/ span 1;
+        justify-self: end;
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: 50px;
+        margin-right: 5px;
+    }
+    &__hexagone {
+        width : 100%;
+        height : 15px;
+        margin-right : 20px;
+    }
+    &__role {
+      visibility: hidden;
+      color : $black;
+      font : {
+          size : 7px;
+          family : $font-title;
+      }
+      grid-row: 1/ span 1;
+      grid-column: 1/ span 1;
+      justify-self: left;
+      margin-top: 15px;
+      margin-left : 23px;
+    }
+    &__title {
+        margin: 0;
+        grid-row: 1/ span 1;
+        grid-column: 3/ span 3;
+        color : $cream;
+        margin-left : 15px;
+        font : {
+            size : $text-xs;
+            family : $font-text;
+            weight : bold;
+        }
+        margin-top : 10px;
+
+    }
+    &__desc {
+        width : 100%;
+        margin-left : 15px;
+        grid-column: 3/ span 3;
+        color : $cream;
+        font-size : $text-xxxs;
+        margin-bottom : 25px;
+    }
+    &__reseau {
+        grid-column: 1/ span 6;
+        display: flex;
+        margin-left : 10px;
+        margin-top : 10px;
+    }
+    &__lien {
+        grid-column: 1/ span 6;
+        width : 100%;
+        height: 110px;
+        grid-row: 1/ span 4;
+        z-index : 1;
+    }
+    &__drapeau {
+        grid-column: 5/ span 1;
+        grid-row: 1/ span 1;
+        height : 15px;
+    }
+    &__hexa {
+        margin-top : 12px;
+        grid-row: 1/ span 1;
+        grid-column: 1/ span 1;
+        height : 15px;
+    }
+}
+.card__role::first-letter {
+    visibility: visible;
+}
+
+.reseau {
+    &__player {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width : 100%;
+        height : 40px;
+    }
+}
+
+.desc {
+    &__pseudo {
+        margin : 0;
+    }
+    &__team {
+        margin :0;
+    }
+    &__town {
+        margin : 0;
+    }
+}
+
+
+.trophy {
+    grid-column: 1/ span 6;
+    grid-row: 2/ span 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    margin-left: 20px;
+    &__title {
+        margin : 0;
+        margin-bottom : 5px;
+        margin-top : 5px;
+        color : $cream;
+        grid-column: 1/ span 3;
+        grid-row: 1/ span 1;
+    }
+    &__img {
+        width : 100%;
+        height : 30px;
+    }
+    &__desc {
+        grid-column: 2/ span 3;
+        grid-row: 2/ span 1;
+        text-transform: uppercase;
+    }
+    &__image {
+        grid-column: 1/ span 1;
+        grid-row: 2/ span 1;
+        height : 30px;
+    }
+}
+
+.cardequipe {
+    grid-column: span 2;
+    margin-bottom: 10px;
+    &__btn {
+        background-color: $purple;
+        grid-row: 5/ span 1;
+        grid-column: 1/ span 1;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    &__title {
+        font-size : rem(7);
+        color : $cream;
+        text-align: center;
+    }
+    &__img {
+        width : 100%;
+        height : 120px;
+        object-fit: cover;
+        grid-row: 1/ span 4;
+        grid-column: 1/ span 1;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+}
+
+.cardtrophee {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 15px;;
+    &__img {
+        width : 100%;
+        height : 40px;
+        margin-left: 8px;
+        grid-row: 1/ span 4;
+    }
+    &__desc {
+        grid-column: 2/ span 5;
+        grid-row: 1/ span 3;
+        color : $cream;
+        text-transform: uppercase;
+        font : {
+            family : $font-title;
+            size : rem(6);
+        }
+        border: solid 1px $mainyellow;
+        margin-bottom: 0;
+        margin-left: 15px;
+        z-index: 0;
+        padding-left: 18px;
+        padding-top: 2px;
+        background-color: $purple;
+        height : 24px;
+    }
+    &__rang {
+        grid-column: 3/ span 4;
+        grid-row: 3/ span 2;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        color : $black;
+        font : {
+            family : $font-title;
+            size : rem(6);
+        }
+        background-color: $mainyellow;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        text-align: center;
+        display: inline;
+        margin-right: 20px;
+        height: 18px;
+        margin-bottom : 15px;
+    }
+    &__place {
+        grid-row: 1/ span 2;
+    }
+    &__image {
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 3;
+        z-index : 1;
+        width: 100%;
+        height: auto;
+    }
+}
+.cardpartner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 10px;
+    &__link {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    &__title {
+        grid-column: 1/ span 6;
+        color : $cream;
+        font-size : rem(10);
+        }
+    &__img {
+        width : 100%;
+        grid-column: 1/ span 1;
+        height : 50px;
+        place-self: center;
+        object-fit: contain;
+    }
+    &__desc {
+        grid-column: 2/ span 5;
+        color : $cream;
+        font-size: rem(8);
+        margin-left: 10px;
+    }
+}
+
+@media (min-width : 640px) {
+    .card {
+        grid-column: span 4;
+    }
+    .cardtrophee {
+        grid-column: span 2;
+    }
+    .cardequipe {
+        &__title {
+            font-size : $text-xxxs;
+        }
+    }
+    .cardpartner {
+        &__link {
+            grid-column: 1/ span 8;
+            grid-template-columns: repeat(8, 1fr);
+        }
+        &__img {
+            grid-column: 2/ span 1;
+            height : 100px;
+            margin-right: 20px;
+        }
+        &__title {
+            grid-column: 3/ span 7;
+            font-size : $text-s;
+        }
+        &__desc {
+            font-size :$text-xs;
+            grid-column: 3/ span 5;
+        }
+    }
+}
+
+@media (min-width : 1000px) {
+    .card {
+        grid-column: span 5;
+        &__lien {
+            height : 150px;
+        }
+        &__img {
+            height: 150px;
+        }
+        &__title {
+            font-size : $text-lm;
+        }
+        &__desc {
+            font-size : $text-xs;
+        }
+        &__flag {
+            height : 30px;
+        }
+        &__hexagone {
+            height : 40px;
+        }
+        &__role {
+            margin : 0;
+            visibility: visible;
+            margin-top: 26px;
+            font-size : $text-xxxxs;
+            justify-self: center;
+        }
+    }
+    .trophy {
+        &__img {
+            height : 40px;
+            margin-top: 5px;
+        }
+    }
+    .reseau {
+        &__player {
+            height : 50px;
+        }
+    }
+    .cardtrophee {
+        grid-column: span 3;
+        grid-template-rows: auto;
+        &__img {
+            height : 50px;
+            grid-row: 1/ 4;
+        }
+        &__desc {
+            font-size : $text-xxxs;
+            grid-row: 1/ span 3;
+            height : auto;
+        }
+        &__rang {
+            font-size: $text-xxxxs;
+            grid-row: 4/span 2;
+        }
+        &__place {
+            margin : 0;
+            margin-top : 7px;
+        }
+    }
+    .cardequipe {
+        grid-column: span 2;
+       &__title {
+           font-size : $text-xxs;
+        }
+        &__img {
+            height : 250px;
+        }
+    }
+    .cardpartner {
+        &__link {
+            grid-column: 1/ span 10;
+            grid-template-columns: repeat(10, 1fr);
+        }
+        &__img {
+            grid-column: 2/ span 1;
+            height : 100px;
+            margin-right: 20px;
+        }
+        &__title {
+            grid-column: 3/ span 9;
+            font-size : $text-s;
+        }
+        &__desc {
+            font-size :$text-xs;
+            grid-column: 3/ span 7;
+        }
+    }
+}
+
+@media (min-width : 1300px){
+    .card {
+        height : 390px;
+        grid-column: span 4;
+        &__img {
+            height : 180px;
+        }
+        &__title {
+            font-size : $text-l;
+            margin-bottom : 10px;
+            margin-left : 30px;
+        }
+        &__desc{
+            font-size : $text-m;
+            margin : 0;
+            margin-left: 30px;
+        }
+        &__flag {
+            height : 40px;
+        }
+        &__roles {
+            margin-top : 2px;
+            justify-self: left;
+        }
+        &__hexagone {
+            height : 40px;
+        }
+        &__role {
+            font-size : rem(7);
+            margin-top: 27px;
+        }
+        &__lien {
+            height : 200px;
+        }
+    }
+    .trophy {
+        margin-bottom : 20px;
+        &__title {
+           font-size : $text-m; 
+        }
+        &__img {
+            height: 50px;
+        }
+        &__desc {
+            margin : 0;
+            margin-top : 10px;
+        }
+        &__image {
+            height : 50px;
+        }
+    }
+
+    .reseau {
+        &__player {
+            height : 60px;
+        }
+    }
+    .cardequipe {
+        grid-column: span 3;
+        margin-bottom: 30px;
+        &__btn {
+            grid-column: 1/ span 2;
+        }
+        &__title {
+            font-size : $text-xs;
+        }
+        &__img {
+            height : 300px;
+            grid-column: 1/ span 2;
+        }
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .cardtrophee {
+        grid-column: span 4;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        margin-bottom: 30px;
+        &__img {
+            grid-column: 1/ span 1;
+            height : 90px;
+        }
+        &__desc {
+            grid-column: 2/ span 3;
+            font-size : $text-s;
+            margin-left: 25px;
+            height : 45px;
+        }
+        &__rang {
+            grid-column: 3/ span 2;
+            grid-row : 2/ span 2;
+            font-size : $text-s;
+            margin-right: 70px;
+            height : 25px;
+        }
+    }
+    .cardpartner {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        &__link {
+            grid-column: 1/ span 12;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        &__title {
+            grid-column: 4/ span 5;
+            font-size : $text-m;
+            grid-row: 1/ span 1;
+            align-content: end;
+            }
+        &__img {
+            grid-column: 2/ span 2;
+            grid-row: 1/ span 2;
+            height : 100px; 
+        }
+        &__desc {
+            grid-column: 4/ span 5;
+            grid-row: 2/ span 1;
+            color : $cream;
+            font-size: $text-xs;
+            margin-left: 10px;
+        }
+    }
+    
+}

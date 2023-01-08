@@ -1,0 +1,226 @@
+.footer {
+    grid-column: 1/ span 6;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: $black;
+    grid-template-rows: auto;
+    padding-top : 30px;
+    margin-top: 30px;
+    &__img {
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 1;
+        width : 100%;
+        padding-left : 20px;
+    }
+    &__logo {
+        width: 100%;
+    }
+    &__paragraph {
+        margin-left : 20px;
+        grid-column: 1/ span 2;
+        font-size : $text-xxxxs;
+        color : $mainyellow;
+    }
+    &__desc {
+        grid-column: 1/ span 2;
+        grid-row: 2/ span 1;
+    }
+    &__reseau {
+        margin : 0;
+        grid-column: 1/ span 2;
+        grid-row: 3/ span 1;
+        display : flex;
+        margin-left : 20px;
+    }
+    &__icon {
+        padding : {
+            right : 5px;
+            bottom : 5px;
+            top : 5px;
+        }
+    }
+    &__mention {
+        margin : 0;
+        grid-row: 4/ span 1;
+        grid-column: 1/ span 2;
+        margin-left : 20px;
+        margin-bottom : 20px;
+    }
+    &__title {
+        font : {
+            size : rem(7);
+            family : $font-subtitle;
+            weight : bold;
+        }
+        color : $mainyellow;
+        text-transform: uppercase;
+    }
+    &__link {
+        margin : 0;
+        font-size : rem(5);
+        color : $mainyellow;
+        display: block;
+    }
+    &__item {
+        width: 100%;
+        height: 10px;
+    }
+    &__nav {
+        grid-row: 1/ span 5;
+        grid-column: 3/ span 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+}
+.list {
+    &__left {
+        margin : 0;
+        grid-column: 1/ span 2;
+        grid-row: 1/ span 2;
+        margin-left : 20px;
+    }
+    &__right {
+        margin : 0;
+        grid-column: 3/ span 2;
+    }
+    &__contact {
+        display: grid;
+        grid-row: repeat(3, 1fr);
+    }
+    &__apropos {
+        margin-bottom : 10px;
+    }
+    &__partenaire {
+        margin-bottom : 22px;
+    }
+}
+.contact {
+    &__media {
+        grid-row: 1/ span 1;
+    }
+    &__postal {
+        grid-row: 2/ span 2;
+    }
+}
+
+@media (min-width : 640px) {
+    .footer {
+        grid-column: 1/ span 8;
+        grid-template-columns: repeat(8, 1fr);
+        &__img {
+            grid-column: 1/ span 3;
+        }
+        &__nav {
+            grid-column: 4/ span 5;
+        }
+        &__paragraph {
+            font-size : $text-xxxs;
+        }
+        &__link {
+            font-size: $text-xxs;
+        }
+        &__item {
+            margin-bottom: 5px;
+        }
+        &__title {
+            font-size : $text-xxs;
+        }
+    }
+}
+
+@media (min-width : 1000px) {
+    .footer {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        &__img {
+            grid-column: 1/ span 4;
+        }
+        &__nav {
+            grid-column: 5/ span 5;
+        }
+    }
+}
+@media (min-width : 1300px){
+    .footer {
+        grid-column: 1/ span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        &__img {
+            grid-column: 1/ span 5;
+            margin-left: 50px;
+        }
+        &__reseau {
+            justify-content: space-between;
+        }
+        &__desc {
+            grid-column: 1/ span 6;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin-left: 50px;
+        }
+        &__paragraph {
+            grid-column: span 3;
+            display: inline;
+            font-size : $text-xxs;
+        }
+        &__nav {
+            margin-top : 30px;
+            grid-column: 7/ span 6;
+        }
+        &__reseau {
+            margin: 0;
+            grid-column: 1/ span 6;
+            justify-self: center;
+        }
+        &__icons {
+            padding-right: 80px;
+        }
+        &__mention {
+            grid-column: 1/ span 3;
+            margin-left: 70px;
+        }
+        &__link {
+            font-size: $text-xxs;
+        }
+        &__title {
+            font-size : $text-xs;
+        }
+        &__item {
+            height: auto;
+        }
+    }
+    .list {
+        &__left {
+            grid-column: 1/span 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__apropos {
+            grid-column: 1/ span 1;
+        }
+        &__tv {
+            grid-column: 2/ span 1;
+        }
+        &__right {
+            grid-row: 1/ span 2;
+            grid-column: 2/span 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__partenaire {
+            grid-column: 1/ span 1;
+            margin-top: 105px;
+            margin-left: 8px;
+        }
+        &__contact {
+            grid-column: 2/ span 1;
+        }
+    }
+
+    .contact {
+        &__postal {
+            margin-bottom: 10px;
+        }
+    }
+}

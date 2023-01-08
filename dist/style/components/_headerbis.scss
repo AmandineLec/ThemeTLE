@@ -1,0 +1,158 @@
+.headerbis {
+    position : sticky;
+    top : 0;
+    background-color: $mainpurple;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+    z-index: 3;
+    &__barre {
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin : {
+            top : 50px;
+            bottom : 20px;
+            right : 20px;
+            left : 20px;
+        }
+    }
+    &__burger {
+        grid-column: 6 / span (1);
+    }
+    &__link {
+        grid-column: 1/ span 3;
+    }
+    &__logo {
+        width: 100%;
+        grid-column: 1 / span (3);
+    }
+    &__bouton {
+        background-color: $mainpurple;
+        margin-bottom : 20px;
+        grid-column: 1/ span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 10px;    
+        border-bottom: solid 2px $mainyellow;
+        padding-left : 20px;
+        padding-right : 20px;
+        z-index: 4;   
+    }
+    &__btn {
+        grid-column: span 3;
+        width: 100%;
+        background-color: $gray;
+        font : {
+            family : $font-title;
+            size : $text-xxs;
+        }
+        color : $mainyellow;
+        border : solid $mainyellow 1px;
+        border-radius: 15px;
+        margin-bottom : 10px;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 640px) {
+    .headerbis {
+        grid-column: 1 /span 8;
+        grid-template-columns: repeat(8, 1fr);
+        &__barre {
+            grid-column: 1/ span 8;
+            grid-template-columns: repeat(8,1fr);
+        }
+        &__bouton {
+            grid-column: 1/ span 8;
+            top : 130px;
+            padding-top : 10px;
+        }
+        &__btn {
+            font-size : $text-xxs;
+            border-radius: 10px;
+            }
+        &__burger {
+            grid-column: 8/ span 1;
+        }
+    }
+}
+@media (min-width : 1000px) {
+    .headerbis {
+        grid-column: 1/ span 10;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: auto;
+        border: none;
+        &__barre {
+            grid-column: 1/ span 10;
+            grid-template-columns: repeat(10, 1fr);
+            margin : 0;
+            border-bottom : solid $mainyellow 1px;
+            grid-row: 1/ span 1;
+        }
+        
+        &__bouton {
+            grid-column: 4/ span 6;
+            grid-row: 1/ span 1;  
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            border: none;
+            margin : 0;
+            align-self: end;  
+            background-color: transparent;   
+        }
+        &__btn {
+            font-size : $text-s;
+            grid-column: span 2;
+            margin-bottom: 40px;
+        }
+        &__burger {
+            grid-column: 10/ span 1;
+            margin-top : 35px;
+            justify-self: center;
+            z-index : auto
+        }
+        &__logo {
+            padding : 20px;
+            grid-column: 1 / span 2;
+            z-index: auto;
+        }
+    }
+}
+@media (min-width: 1300px) {
+    .headerbis {
+    grid-column: 1/ span 12;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 50px;
+    &__link {
+        grid-column: 1 / span 2;
+    }
+    &__barre {
+        grid-column: 1/ span 12;
+        grid-template-columns: repeat(12, 1fr);
+        margin : 0;
+    }
+    &__bouton {
+        grid-column: 3/ span 8;
+        grid-template-columns: repeat(9, 1fr);
+        margin-bottom: 25px;
+        padding : 0;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    &__btn {
+        grid-column: span 3;
+        font-size : $text-l;
+        margin-bottom : 15px;
+        border-radius: 10px;
+    }
+    &__burger {
+        grid-column: 12 / span 1;
+        margin-top : 30px;
+        }
+    }
+}
+
+
+
